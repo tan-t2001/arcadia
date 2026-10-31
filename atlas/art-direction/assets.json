@@ -1,0 +1,291 @@
+{
+  "generator": "built-in imagegen",
+  "currentMap": "assets/map-v3.png",
+  "records": [
+    {
+      "id": "sadland",
+      "location": "sadland",
+      "title": "绿洲初灯",
+      "version": 2,
+      "original": "assets/concepts/sadland-v2.png",
+      "preview": "assets/previews/sadland-v2.jpg",
+      "thumbnail": "assets/thumbs/sadland-v2.jpg",
+      "camera": "南侧 · 聚落全景",
+      "sightline": {
+        "camera": "村南看向北 · 皇都位于北偏东",
+        "background": "近景小溪向南出村；北侧为连续干燥沙地。远处略偏右可见皇都轮廓，南方海湾位于镜头背后。",
+        "context": "沙德兰在皇都以南、开博镇东北。池塘为小型绿洲，不连接村北大湖。"
+      }
+    },
+    {
+      "id": "capital",
+      "location": "capital",
+      "title": "河海之间的帝都",
+      "version": 2,
+      "original": "assets/concepts/capital-v2.png",
+      "preview": "assets/previews/capital-v2.jpg",
+      "thumbnail": "assets/thumbs/capital-v2.jpg",
+      "camera": "东南高空 · 总体布局",
+      "sightline": {
+        "camera": "总览从东南望西北 · 局部视角共享总平面",
+        "background": "皇宫西北，市政与斗兽场东北，海港在更东的海岸；南面是民居与通往沙德兰的陆路。皇宫镜头南向北，港口镜头东向西。",
+        "context": "以原设定及建筑参考为主，借鉴尼罗河畔市井繁荣。橙色挂幡集中于少数仪式节点。"
+      }
+    },
+    {
+      "id": "palace",
+      "location": "capital",
+      "title": "日轮皇宫",
+      "version": 2,
+      "original": "assets/concepts/palace-v2.png",
+      "preview": "assets/previews/palace-v2.jpg",
+      "thumbnail": "assets/thumbs/palace-v2.jpg",
+      "camera": "南侧 · 皇宫外景",
+      "sightline": {
+        "camera": "总览从东南望西北 · 局部视角共享总平面",
+        "background": "皇宫西北，市政与斗兽场东北，海港在更东的海岸；南面是民居与通往沙德兰的陆路。皇宫镜头南向北，港口镜头东向西。",
+        "context": "以原设定及建筑参考为主，借鉴尼罗河畔市井繁荣。橙色挂幡集中于少数仪式节点。"
+      }
+    },
+    {
+      "id": "arena",
+      "location": "capital",
+      "title": "日暮竞技场",
+      "version": 2,
+      "original": "assets/concepts/arena-v2.png",
+      "preview": "assets/previews/arena-v2.jpg",
+      "thumbnail": "assets/thumbs/arena-v2.jpg",
+      "camera": "东南侧 · 椭圆斗兽场",
+      "sightline": {
+        "camera": "总览从东南望西北 · 局部视角共享总平面",
+        "background": "皇宫西北，市政与斗兽场东北，海港在更东的海岸；南面是民居与通往沙德兰的陆路。皇宫镜头南向北，港口镜头东向西。",
+        "context": "以原设定及建筑参考为主，借鉴尼罗河畔市井繁荣。橙色挂幡集中于少数仪式节点。"
+      }
+    },
+    {
+      "id": "harbor",
+      "location": "capital",
+      "title": "黑曜石海门",
+      "version": 2,
+      "original": "assets/concepts/harbor-v2.png",
+      "preview": "assets/previews/harbor-v2.jpg",
+      "thumbnail": "assets/thumbs/harbor-v2.jpg",
+      "camera": "海侧 · 港口与沙雕公园",
+      "sightline": {
+        "camera": "总览从东南望西北 · 局部视角共享总平面",
+        "background": "皇宫西北，市政与斗兽场东北，海港在更东的海岸；南面是民居与通往沙德兰的陆路。皇宫镜头南向北，港口镜头东向西。",
+        "context": "以原设定及建筑参考为主，借鉴尼罗河畔市井繁荣。橙色挂幡集中于少数仪式节点。"
+      }
+    },
+    {
+      "id": "cab",
+      "location": "cab",
+      "title": "潮汐与阶街",
+      "version": 1,
+      "original": "assets/concepts/cab-v1.png",
+      "preview": "assets/previews/cab-v1.jpg",
+      "thumbnail": "assets/thumbs/cab-v1.jpg",
+      "camera": "东侧海面 · 望西上坡",
+      "sightline": {
+        "camera": "东侧海面看向西 · 山坡位于镇后",
+        "background": "码头与海湾在前景；南侧海面位于画面左方。山坡承托医院、学校，北至东北方向的皇都在画外或被山坡遮挡。",
+        "context": "开博镇沿南方海湾西岸展开，与沙德兰有陆路相连。"
+      }
+    },
+    {
+      "id": "fishing",
+      "location": "fishing",
+      "title": "丰收归港",
+      "version": 1,
+      "original": "assets/concepts/fishing-v1.png",
+      "preview": "assets/previews/fishing-v1.jpg",
+      "thumbnail": "assets/thumbs/fishing-v1.jpg",
+      "camera": "西南海面 · 望东北内陆",
+      "sightline": {
+        "camera": "西南海面看向东北 · 皇都在镜头后方",
+        "background": "海港在前景，北湾偏画面左侧，房屋后方是与沙漠腹地连通的陆地；东侧分界河位于画面右外。皇都在西南侧，不出现在正前方。",
+        "context": "渔村沿北湾东岸，与皇都腹地接壤；更东是分界河和平原，不能隔成孤岛。"
+      }
+    },
+    {
+      "id": "papyrus",
+      "location": "papyrus",
+      "title": "河畔纸与糖",
+      "version": 2,
+      "original": "assets/concepts/papyrus-v2.png",
+      "preview": "assets/previews/papyrus-v2.jpg",
+      "thumbnail": "assets/thumbs/papyrus-v2.jpg",
+      "camera": "东南高处 · 作坊全景",
+      "sightline": {
+        "camera": "东南看向西北 · 水轮直接临河",
+        "background": "村庄在河西岸，河道沿右侧经过，水轮伸入河水。皇都位于北偏西远景，甘蔗田和树木形成中景层次。",
+        "context": "纸乡位于淡水支流，与北方海岸渔村分开；水轮与磨坊连为一体。"
+      }
+    },
+    {
+      "id": "quarry",
+      "location": "quarry",
+      "title": "砂岩的年轮",
+      "version": 2,
+      "original": "assets/concepts/quarry-v2.png",
+      "preview": "assets/previews/quarry-v2.jpg",
+      "thumbnail": "assets/thumbs/quarry-v2.jpg",
+      "camera": "东南高处 · 矿区全景",
+      "sightline": {
+        "camera": "东南望西北 · 向下开采的低矮矿坑",
+        "background": "矿坑低于周边地面，只有小工棚与吊架高出地面；远景为西部干燥山地，无大片背景湖泊。皇都在东北方向，位于画面右外。",
+        "context": "矿车沿连续线路向东运石。矿区体量小于都城，不成为高耸山城。"
+      }
+    },
+    {
+      "id": "pyramid",
+      "location": "pyramid",
+      "title": "沉日遗迹",
+      "version": 1,
+      "original": "assets/concepts/pyramid-v1.png",
+      "preview": "assets/previews/pyramid-v1.jpg",
+      "thumbnail": "assets/thumbs/pyramid-v1.jpg",
+      "camera": "东南沙丘 · 遗迹全景",
+      "sightline": {
+        "camera": "东南望西北 · 深沙漠取景",
+        "background": "前景祭道通向主塔，远景仅为沙丘与低山；都城在东方画外。",
+        "context": "一主两辅，空旷古老；不把真实埃及金字塔与阶梯神殿混同。"
+      }
+    },
+    {
+      "id": "oasis",
+      "location": "oasis",
+      "title": "偏心的黄昏",
+      "version": 1,
+      "original": "assets/concepts/oasis-v1.png",
+      "preview": "assets/previews/oasis-v1.jpg",
+      "thumbnail": "assets/thumbs/oasis-v1.jpg",
+      "camera": "西侧 · 望东看海湾与皇都",
+      "sightline": {
+        "camera": "西侧望东 · 海湾在左、皇都在右远景",
+        "background": "北方海湾对应画面左侧，东南方向的皇都在画面右远处；酒店立在海岸低山上，温泉位于底层外侧。",
+        "context": "各层为偏心椭圆，西侧取景可见层间错位。泳池、吧台和木栏位于屋顶。"
+      }
+    },
+    {
+      "id": "desert-fort",
+      "location": "desert-fort",
+      "title": "赤砂守望",
+      "version": 2,
+      "original": "assets/concepts/desert-fort-v2.png",
+      "preview": "assets/previews/desert-fort-v2.jpg",
+      "thumbnail": "assets/thumbs/desert-fort-v2.jpg",
+      "camera": "西南上空 · 沙漠西岸",
+      "sightline": {
+        "camera": "西南望东北 · 沙漠岸看向河对面",
+        "background": "要塞在西岸，河道紧邻东侧，远处对岸为灰石草原要塞与绿地。西岸仍为沙漠。",
+        "context": "赤砂关已从沙漠腹地移至沙漠—平原边界，与长风要塞隔河对峙。"
+      }
+    },
+    {
+      "id": "winery",
+      "location": "winery",
+      "title": "蓝塔与葡萄藤",
+      "version": 1,
+      "original": "assets/concepts/winery-v1.png",
+      "preview": "assets/previews/winery-v1.jpg",
+      "thumbnail": "assets/thumbs/winery-v1.jpg",
+      "camera": "东南侧 · 庄园全景",
+      "sightline": {
+        "camera": "东南望西北 · 山脉挡住西部沙漠",
+        "background": "城堡在葡萄园西侧，山脉位于城堡后方。葡萄田连同城堡都在灰石基座的铁栏内；东门通向邻近城区。",
+        "context": "酒庄、泉心里和彩虹街属于同一座普莱恩市；不透过山脉展示沙漠皇都。"
+      }
+    },
+    {
+      "id": "rainbow",
+      "location": "rainbow",
+      "title": "二十色的生意",
+      "version": 1,
+      "original": "assets/concepts/rainbow-v1.png",
+      "preview": "assets/previews/rainbow-v1.jpg",
+      "thumbnail": "assets/thumbs/rainbow-v1.jpg",
+      "camera": "街道高处 · 双排骑楼",
+      "sightline": {
+        "camera": "街南看向北 · 西侧紧邻泉心里",
+        "background": "两排标准骑楼与平屋顶木栏，左侧短巷通往喷泉和教堂；酒庄在西北远景，背后为西部山脉。",
+        "context": "20 铺共用建筑骨架与 16 色基础材质；居民区和彩虹街直接相邻。"
+      }
+    },
+    {
+      "id": "residential",
+      "location": "residential",
+      "title": "泉心的日常",
+      "version": 1,
+      "original": "assets/concepts/residential-v1.png",
+      "preview": "assets/previews/residential-v1.jpg",
+      "thumbnail": "assets/thumbs/residential-v1.jpg",
+      "camera": "东南高处 · 广场全景",
+      "sightline": {
+        "camera": "东南望西北 · 彩虹街在东侧近邻",
+        "background": "喷泉居中，教堂在北侧，医院在西，学校在东。彩虹街紧贴画面右侧；酒庄蓝塔在西北远景，西侧山脉形成遮挡。",
+        "context": "彩虹街经短石街连接居民广场，不以农田或空旷荒地分隔。"
+      }
+    },
+    {
+      "id": "plains-fort",
+      "location": "plains-fort",
+      "title": "长风之垒",
+      "version": 1,
+      "original": "assets/concepts/plains-fort-v1.png",
+      "preview": "assets/previews/plains-fort-v1.jpg",
+      "thumbnail": "assets/thumbs/plains-fort-v1.jpg",
+      "camera": "东南上空 · 要塞全景",
+      "sightline": {
+        "camera": "东南望西北 · 绿岸看向沙漠对岸",
+        "background": "灰石城墙紧靠西侧河岸，对岸为砂岩赤砂关。河水把西部沙地与东部草地分开；普莱恩山脉遮挡更远沙漠城镇。",
+        "context": "草原要塞直接临河，沿南方水道守望，不再位于离河很远的山谷。"
+      }
+    },
+    {
+      "id": "temple-low",
+      "location": "temple",
+      "title": "仰望四时",
+      "version": 2,
+      "original": "assets/concepts/temple-low-v2.png",
+      "preview": "assets/previews/temple-low-v2.jpg",
+      "thumbnail": "assets/thumbs/temple-low-v2.jpg",
+      "camera": "南侧低机位 · 神殿体量",
+      "sightline": {
+        "camera": "南侧低机位与南侧高空 · 季节方位不变",
+        "background": "两面山脊和西南河道环抱神殿。由南向北看：春在后左，夏在后右，冬在前左，秋在前右；四柱、祭坛与道路共用同一平面。",
+        "context": "地图沿用首版空中花园的层叠轮廓、山水环境与季节色彩。"
+      }
+    },
+    {
+      "id": "temple-top",
+      "location": "temple",
+      "title": "一座庭院，四个季节",
+      "version": 1,
+      "original": "assets/concepts/temple-top-v1.png",
+      "preview": "assets/previews/temple-top-v1.jpg",
+      "thumbnail": "assets/thumbs/temple-top-v1.jpg",
+      "camera": "南侧高空 · 顶台布局",
+      "sightline": {
+        "camera": "南侧低机位与南侧高空 · 季节方位不变",
+        "background": "两面山脊和西南河道环抱神殿。由南向北看：春在后左，夏在后右，冬在前左，秋在前右；四柱、祭坛与道路共用同一平面。",
+        "context": "地图沿用首版空中花园的层叠轮廓、山水环境与季节色彩。"
+      }
+    },
+    {
+      "id": "goblin",
+      "location": "goblin",
+      "title": "山丘里的灯",
+      "version": 1,
+      "original": "assets/concepts/goblin-v1.png",
+      "preview": "assets/previews/goblin-v1.jpg",
+      "thumbnail": "assets/thumbs/goblin-v1.jpg",
+      "camera": "谷地入口 · 地面与洞口",
+      "sightline": {
+        "camera": "谷地入口望内 · 与开博镇相隔长途",
+        "background": "花园与覆草矮屋藏在山丘间，洞口通往地下居住矿道。远方开博镇不应紧贴村后出现。",
+        "context": "地图虚线代表长距离旅途；图面上的近距不等于实际相邻。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+/dist/
+*.tar.gz
+*.zip
+.env
+.env.*
+!.env.example
+

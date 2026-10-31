@@ -1,0 +1,4 @@
+__pycache__/
+feedback/*.json
+feedback/*.tmp
+.DS_Store
