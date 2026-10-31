@@ -4,11 +4,11 @@
 
 ## 网页入口
 
-[进入阿卡迪亚三维世界](https://arcadia-tan-t2001.smartlamb258.chatgpt.site/#world3d)
+[进入阿卡迪亚三维世界](https://tan-t2001.github.io/arcadia/#world3d)
 
-网站由 Sites 私有托管，访问需要登录有权限的 ChatGPT 账号。当前默认仅所有者可访问，所有者可以通过网站分享设置授权指定邮箱，并随时撤销访问。
+仓库与网页均为 Public，任何人都可以打开。网页由 GitHub Pages 托管。
 
-此 GitHub 仓库为 private，源码协作者与网页访客分别管理。网页访客使用网站授权，源码协作者由仓库所有者在 GitHub 设置中邀请。
+公开发布与受邀访问的设置方法见[访问权限说明](访问权限说明.md)。
 
 ## 内容与操作
 
@@ -29,4 +29,6 @@ cd ..
 python build_site.py
 ```
 
-`build_site.py` 将网页与素材整理到 `dist/`，并启用浏览器本地保存模式。托管项目记录在 `.openai/hosting.json`。更新网站时，将检查通过的源码同步到 Sites 的项目源仓库，再打包发布。GitHub 仓库负责保存源文件与版本。
+`build_site.py` 将网页与素材整理到 `dist/`，并启用浏览器本地保存模式。每次推送到 `main`，`.github/workflows/pages.yml` 会自动检查、打包并发布网页。
+
+仓库 Settings → Pages → Source 选择 GitHub Actions。等待 Actions 中的发布任务成功，即可使用上方网址。

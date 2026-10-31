@@ -1,4 +1,4 @@
-"""Prepare the browser-only website for private static hosting."""
+"""Prepare the browser-only website for static hosting."""
 import shutil
 from pathlib import Path
 
@@ -31,4 +31,4 @@ files = [path for path in output.rglob("*") if path.is_file()]
 assert (output / "vendor" / "three.min.js").is_file()
 assert 'content="browser"' in html
 assert not (output / "feedback").exists()
-print(f"Prepared private static website: {len(files)} files, {sum(p.stat().st_size for p in files):,} bytes")
+print(f"Prepared static website: {len(files)} files, {sum(p.stat().st_size for p in files):,} bytes")
