@@ -1,0 +1,128 @@
+/* The 3D field viewer shares the atlas paper, ink and brass palette. */
+.world3d-view { padding: 22px 26px 18px; }
+.world3d-view .page-heading { margin-bottom: 16px; }
+.world3d-view .page-heading h1 { font-size: 27px; }
+.world3d-view .page-heading h1 span { font-size: 21px; }
+.world3d-heading-meta { display: flex; align-items: center; gap: 9px; font-size: 10px; color: #77826c; white-space: nowrap; }
+.world3d-heading-meta i { width: 6px; height: 6px; border-radius: 50%; background: #7b977b; }
+.world3d-shell { position: relative; border: 1px solid #c2b592; background: #c7d7d4; overflow: hidden; min-height: 460px; height: calc(100svh - 238px); }
+.world3d-stage { width: 100%; height: 100%; position: absolute; inset: 0; outline-offset: -4px; }
+.world3d-stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.world3d-toolbar { position: absolute; top: 16px; left: 16px; right: 16px; z-index: 4; display: flex; align-items: center; gap: 8px; pointer-events: none; }
+.world3d-toolbar > * { pointer-events: auto; }
+.world3d-toolbar button, .world3d-toolbar select { background: #f6f3e8ef; border: 1px solid #d4cfbb; color: #465747; min-height: 36px; border-radius: 3px; padding: 8px 11px; font-size: 11px; margin: 0; width: auto; }
+.world3d-toolbar button:hover { background: #fffaf0; }
+.world3d-toolbar button[aria-pressed="true"] { background: #2e493e; color: #f7edd6; border-color: #4e6659; }
+.world3d-modes { display: flex; box-shadow: 0 3px 16px #294a3d14; }
+.world3d-modes button { border-radius: 0; }
+.world3d-modes button:first-child { border-radius: 3px 0 0 3px; }
+.world3d-modes button:last-child { border-radius: 0 3px 3px 0; border-left: 0; }
+.world3d-toolbar .world3d-destination { max-width: 182px; }
+.world3d-toolbar .world3d-spacer { flex: 1; pointer-events: none; }
+.world3d-toolbar .square-control { width: 36px; padding: 8px; font-size: 16px; }
+.world3d-labels { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.world3d-label { position: absolute; top: 0; left: 0; pointer-events: auto; transform-origin: 50% 100%; padding: 5px 9px; background: #f7f1e1f2; border: 1px solid #c7b284; box-shadow: 0 2px 10px #344d3926; color: #5c523e; font-size: 10px; letter-spacing: .4px; white-space: nowrap; border-radius: 2px; }
+.world3d-label:after { content: ''; position: absolute; left: calc(50% - 2px); bottom: -7px; width: 4px; height: 4px; border-radius: 50%; background: #e8dcc1; border: 1px solid #8e835e; }
+.world3d-label.selected { background: #2e493e; border-color: #9baf93; color: #f6edd5; z-index: 2; }
+.world3d-label small { display: inline-block; width: 4px; height: 4px; margin-right: 5px; border-radius: 50%; background: #ad8856; vertical-align: middle; }
+.world3d-label[data-region="plains"] small { background: #729773; }
+.world3d-label[data-region="goblin"] small { background: #8a7597; }
+.world3d-place-card { position: absolute; left: 18px; bottom: 62px; z-index: 4; width: 264px; background: #f6f2e6f2; border: 1px solid #d1c4a3; box-shadow: 0 5px 25px #27483a20; padding: 17px 18px 14px; }
+.world3d-place-card .eyebrow { font-size: 8px; color: #8c815e; letter-spacing: 2px; }
+.world3d-place-card h2 { font: 600 23px var(--serif); margin: 7px 0; letter-spacing: 1px; }
+.world3d-place-card p { color: #7c806c; font-size: 11px; line-height: 1.8; margin: 0 0 12px; }
+.world3d-card-line { display: flex; gap: 10px; align-items: center; border-top: 1px solid #d8d7c8; padding-top: 11px; }
+.world3d-card-line button { font-size: 10px; color: #52725b; padding: 2px 0; }
+.world3d-card-line button:first-child { margin-right: auto; }
+.world3d-card-line button:hover { color: #ac8146; }
+.world3d-map { position: absolute; right: 18px; bottom: 62px; z-index: 4; width: 190px; background: #f2eee0ef; border: 1px solid #d1c4a3; box-shadow: 0 5px 25px #27483a20; }
+.world3d-map header { display: flex; justify-content: space-between; padding: 9px 11px 5px; font: 8px Georgia, serif; letter-spacing: 1.5px; color: #827b60; }
+.world3d-map canvas { width: 100%; height: 132px; display: block; cursor: crosshair; touch-action: manipulation; }
+.world3d-map small { display: block; font-size: 8px; color: #8b8f7c; text-align: center; padding: 4px 0 8px; }
+.world3d-statusbar { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 17px; display: flex; align-items: center; gap: 14px; background: #263d35ed; color: #d6decb; z-index: 5; min-height: 43px; font-size: 10px; }
+.world3d-statusbar kbd { font-family: var(--sans); background: #ffffff16; padding: 2px 4px; border: 1px solid #ffffff18; border-radius: 2px; margin-right: 3px; font-size: 9px; }
+.world3d-statusbar .world3d-readout { margin-left: auto; font: 9px Georgia, serif; color: #c7cdb6; white-space: nowrap; }
+.world3d-statusbar .world3d-speed-label { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.world3d-statusbar select { width: 74px; margin: 0; padding: 3px; color: #e5e7d8; font-size: 10px; background: #41564a; border-color: #6b7d67; }
+.world3d-crosshair { position: absolute; top: 50%; left: 50%; width: 15px; height: 15px; transform: translate(-50%,-50%); pointer-events: none; border: 1px solid #fff9; border-radius: 50%; box-shadow: 0 0 0 1px #26483c55; }
+.world3d-crosshair:after { content: ''; width: 3px; height: 3px; border-radius: 50%; background: #fff; position: absolute; top: 5px; left: 5px; }
+.world3d-loading { position: absolute; inset: 0; z-index: 8; display: grid; place-items: center; background: #e9e8d9; text-align: center; padding: 30px; }
+.world3d-loading strong { display: block; font: 500 26px var(--serif); letter-spacing: 3px; color: #4f6853; }
+.world3d-loading p { color: #89917b; font-size: 12px; line-height: 1.8; }
+.world3d-loading button { padding: 10px 20px; background: #304d3e; color: #f4e9ce; border-radius: 3px; }
+.world3d-loading .orbit-mark { display: inline-block; width: 43px; height: 43px; border: 1px solid #b3ad8a; border-top-color: #526f58; border-radius: 50%; animation: orbit-loader 2s linear infinite; margin-bottom: 22px; }
+@keyframes orbit-loader { to { transform: rotate(360deg); } }
+.world3d-help { position: absolute; top: 62px; right: 16px; z-index: 6; width: 278px; background: #f7f3e8f5; padding: 19px; border: 1px solid #cbbd99; box-shadow: 0 6px 30px #20433426; }
+.world3d-help h3 { margin: 0 0 12px; font: 18px var(--serif); }
+.world3d-help p { margin: 8px 0; color: #73806b; font-size: 11px; line-height: 1.8; }
+.world3d-help hr { border: 0; border-top: 1px solid #d9d7c6; margin: 12px 0; }
+.world3d-help button { margin-top: 7px; font-size: 11px; color: #58785e; padding: 0; }
+.world3d-footnote { display: flex; justify-content: space-between; gap: 15px; margin-top: 11px; font-size: 9px; color: #92937e; line-height: 1.8; }
+.world3d-footnote span:last-child { font: 8px Georgia,serif; letter-spacing: 1px; padding-top: 3px; }
+.world3d-touch-controls { display: none; position: absolute; bottom: 65px; left: 17px; right: 17px; z-index: 5; justify-content: space-between; pointer-events: none; }
+.world3d-dpad { display: grid; grid-template-columns: repeat(3,37px); gap: 4px; pointer-events: auto; }
+.world3d-dpad button,.world3d-elevation button { background: #263d35c9; border: 1px solid #bec9b177; color: #f4eedb; border-radius: 4px; width: 37px; height: 37px; font-size: 17px; touch-action: none; user-select: none; }
+.world3d-dpad button:first-child { grid-column: 2; }
+.world3d-dpad button:nth-child(2) { grid-column: 1; }
+.world3d-elevation { display: grid; gap: 4px; pointer-events: auto; }
+.world3d-elevation button { font-size: 12px; width: 43px; }
+.world3d-shell.expanded { position: fixed; inset: 10px; height: auto; z-index: 50; }
+.world3d-shell:fullscreen { width: 100vw; height: 100dvh; border: 0; }
+.world3d-shell.fly-mode .world3d-stage { cursor: grab; }
+.world3d-shell.fly-mode .world3d-stage:active { cursor: grabbing; }
+.detail-visit3d { display: flex; gap: 7px; width: 100%; justify-content: center; align-items: center; padding: 11px; margin: 2px 0 10px; border: 1px solid #b9c4ad; color: #48684d; font-size: 12px; background: #e7eadc; }
+@media (max-width:1200px) {
+  .world3d-toolbar { flex-wrap: wrap; }
+  .world3d-toolbar .world3d-destination { max-width: 145px; }
+  .world3d-place-card { width: 226px; padding: 13px 15px; }
+  .world3d-map { width: 160px; }
+  .world3d-statusbar { gap: 8px; font-size: 9px; }
+  .world3d-heading-meta { display: none; }
+  .world3d-readout { display: none; }
+  .main-nav { gap: 17px; }
+}
+@media (max-width:850px) {
+  .world3d-view { padding: 20px 16px; }
+  .world3d-toolbar { top: 10px; left: 10px; right: 10px; gap: 5px; }
+  .world3d-toolbar button,.world3d-toolbar select { padding: 7px 8px; font-size: 10px; }
+  .world3d-map { width: 135px; right: 10px; }
+  .world3d-map canvas { height: 100px; }
+  .world3d-place-card { width: 198px; left: 10px; }
+  .world3d-place-card h2 { font-size: 19px; }
+  .world3d-place-card p { font-size: 10px; }
+  .world3d-light-label { display: none; }
+}
+@media (pointer:coarse) {
+  .fly-mode .world3d-touch-controls { display: flex; }
+  .fly-mode .world3d-place-card,.fly-mode .world3d-map { display: none; }
+}
+@media (max-width:640px) {
+  .main-nav { gap: 21px; }
+  .main-nav .nav-link { font-size: 11px; }
+  .main-nav .nav-link .icon { display: none; }
+  .world3d-view { padding: 17px 10px; }
+  .world3d-view .page-heading h1 { font-size: 25px; }
+  .world3d-view .page-heading h1 span { font-size: 19px; }
+  .world3d-shell { height: calc(100svh - 287px); min-height: 520px; }
+  .world3d-toolbar .world3d-spacer { flex: none; }
+  .world3d-toolbar .world3d-destination { flex: 1; max-width: 160px; min-width: 110px; }
+  .world3d-toolbar .world3d-quality { display: none; }
+  .world3d-toolbar .square-control { width: 31px; min-height: 31px; }
+  .world3d-map { width: 116px; bottom: 61px; }
+  .world3d-map canvas { height: 85px; }
+  .world3d-map header { font-size: 7px; padding: 7px 8px 3px; }
+  .world3d-map small { font-size: 7px; }
+  .world3d-place-card { width: calc(100% - 146px); bottom: 61px; padding: 11px; }
+  .world3d-place-card h2 { font-size: 18px; margin: 6px 0; }
+  .world3d-place-card p { margin-bottom: 7px; font-size: 9px; }
+  .world3d-place-card .eyebrow { letter-spacing: 1px; font-size: 7px; }
+  .world3d-card-line { gap: 8px; flex-wrap: wrap; padding-top: 8px; }
+  .world3d-card-line button { font-size: 9px; }
+  .world3d-statusbar { padding: 9px; min-height: 46px; line-height: 1.5; }
+  .world3d-statusbar #world3dHint { max-width: 230px; }
+  .world3d-statusbar .world3d-speed-label { margin-left: auto; }
+  .world3d-label { font-size: 9px; padding: 4px 6px; }
+  .world3d-footnote span:last-child { display: none; }
+  .world3d-help { top: 96px; right: 10px; width: min(278px,calc(100% - 20px)); }
+  .world3d-shell.expanded { inset: 0; }
+}

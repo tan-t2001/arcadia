@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263d35">
+  <meta name="description" content="展开阿卡迪亚的羊皮卷，探索沙漠帝国、翡翠平原与远方聚落。互动地图、地方志与概念素材手札。">
+  <title>ARCADIA — 阿卡迪亚世界图志</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="world3d.css">
+  <script src="world.js" defer></script>
+  <script src="world3d.js?v=20261031-detail5" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#map" class="brand" aria-label="阿卡迪亚，返回世界地图"><span class="brand-mark" data-icon="compass"></span><span>ARCADIA<small>阿 卡 迪 亚 · 世 界 图 志</small></span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <button class="nav-link active" data-view="map"><span data-icon="map"></span>世界地图</button>
+      <button class="nav-link" data-view="world3d"><span data-icon="compass"></span>3D 世界</button>
+      <button class="nav-link" data-view="gallery"><span data-icon="image"></span>地点图鉴</button>
+      <button class="nav-link" data-view="revisions"><span data-icon="book"></span>修订手札<span class="note-count">0</span></button>
+    </nav>
+    <div class="top-actions"><span class="edition">卷一 <i></i> 初绘本</span><button class="gold-button" id="globalFeedback"><span data-icon="feather"></span><span>留下修改建议</span></button></div>
+  </header>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="地点索引">
+      <div class="index-heading"><span class="eyebrow">THE TRAVELLER’S INDEX</span><h2>寻一处远方<span>15</span></h2></div>
+      <label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="搜索地名、建筑、故事…" autocomplete="off" aria-label="搜索地点"><kbd>/</kbd></label>
+      <div class="region-filters" aria-label="按地区筛选"><button class="active" data-region="all">全部</button><button data-region="desert">沙漠</button><button data-region="plains">平原</button><button data-region="goblin">远方</button></div>
+      <div class="location-index" id="locationIndex"></div>
+      <div class="sidebar-bottom"><span data-icon="compass"></span><p>地图的边缘，<br>是故事的起点。</p><span class="small-cap">A WORLD IN THE MAKING</span></div>
+    </aside>
+    <main id="mainContent">
+      <section id="mapView" class="view map-view" aria-labelledby="mapTitle">
+        <div class="page-heading"><div><span class="eyebrow">VOLUME I &nbsp; / &nbsp; THE KNOWN REALMS</span><h1 id="mapTitle">阿卡迪亚<span>世界图志</span></h1><p>循着河流与古道，走进一个尚未写完的世界。</p></div><div class="map-meta"><span><b>15</b> 处地点</span><span><b>19</b> 幅概念</span><button class="text-button" id="mapReview"><span data-icon="feather"></span>修订这张地图</button></div></div>
+        <div class="map-shell" id="mapShell">
+          <div class="map-topline"><span><i class="live-dot"></i> 第三次测绘 · 地理修订版</span><span>北境海湾 · 沙漠帝国 · 翡翠平原</span></div>
+          <div class="map-viewport" id="mapViewport" tabindex="0" aria-label="互动世界地图，可拖动平移、双指缩放，或使用缩放按钮。点击地点阅读详情。">
+            <div class="map-paper" id="mapPaper"><img id="worldMap" src="assets/map-v3.png" width="1536" height="1024" alt="阿卡迪亚羊皮纸地图：西部沙漠帝国，东部翡翠平原，边界河两岸分别为赤砂关与长风要塞；南部海湾连接开博镇。" draggable="false"><div id="mapPins"></div></div>
+            <div class="map-tools"><button id="zoomIn" aria-label="放大地图" title="放大"><span data-icon="plus"></span></button><span id="zoomLevel">100%</span><button id="zoomOut" aria-label="缩小地图" title="缩小"><span data-icon="minus"></span></button><hr><button id="resetMap" aria-label="显示完整地图" title="复位地图"><span data-icon="focus"></span></button><button id="toggleLabels" aria-label="显示或隐藏地名" aria-pressed="true" title="地名"><span data-icon="label"></span></button><button id="immersive" aria-label="切换沉浸地图" aria-pressed="false" title="沉浸地图"><span data-icon="expand"></span></button></div>
+            <div class="map-hint"><span data-icon="hand"></span><span>拖动探索 · 点击地标展开故事</span></div>
+          </div>
+          <div class="map-bottomline"><div class="legend"><span><i class="legend-dot sand"></i>沙漠帝国</span><span><i class="legend-dot green"></i>翡翠平原</span><span><i class="legend-dot purple"></i>远方聚落</span></div><span class="map-scale">地标为示意比例 · 北向上 <span data-icon="north"></span></span></div>
+        </div>
+        <div class="map-footnote"><span><span data-icon="spark"></span> 从<span class="inline-location" role="button" tabindex="0" data-location="sadland">沙德兰村</span>出发，或让好奇心替你选路。</span><span>EST. IN IMAGINATION &nbsp; · &nbsp; MMXXVI</span></div>
+      </section>
+      <section id="world3dView" class="view world3d-view" aria-labelledby="world3dTitle" hidden>
+        <div class="page-heading"><div><span class="eyebrow">VOLUME II &nbsp; / &nbsp; A WORLD TO WANDER</span><h1 id="world3dTitle">走进<span>阿卡迪亚</span></h1><p>越过砂岩城墙，沿着河流，飞向四季永驻的山巅。</p></div><div class="world3d-heading-meta"><i></i> THREE.JS &nbsp; · &nbsp; 15 处可探索地点</div></div>
+        <div class="world3d-shell" id="world3dShell">
+          <div class="world3d-stage" id="world3dStage" tabindex="0" aria-label="3D 世界操作区域"></div>
+          <div class="world3d-labels" id="world3dLabels"></div>
+          <div class="world3d-toolbar" aria-label="3D 浏览工具">
+            <div class="world3d-modes"><button data-camera-mode="orbit" aria-pressed="true">环绕查看</button><button data-camera-mode="fly" aria-pressed="false">自由飞行</button></div>
+            <select id="world3dDestination" class="world3d-destination" aria-label="选择要前往的地点"><option value="world">阿卡迪亚全境</option></select>
+            <button id="world3dOverview" title="回到全境鸟瞰">全境</button>
+            <span class="world3d-spacer"></span>
+            <select id="world3dLight" aria-label="光照时段"><option value="day">晴昼</option><option value="evening">暖暮</option></select>
+            <select id="world3dQuality" class="world3d-quality" aria-label="渲染画质"><option value="light">轻盈画质</option><option value="balanced" selected>均衡画质</option><option value="high">精致画质</option></select>
+            <button class="square-control" id="world3dLabelsToggle" aria-pressed="true" aria-label="显示地名" title="显示或隐藏地名">名</button>
+            <button class="square-control" id="world3dExpand" aria-pressed="false" aria-label="切换沉浸视图" title="沉浸视图 · Esc 退出">⛶</button>
+            <button class="square-control" id="world3dHelpToggle" aria-label="操作帮助" title="操作帮助">?</button>
+          </div>
+          <article class="world3d-place-card" aria-live="polite"><span class="eyebrow" id="world3dPlaceEn">A WORLD TO WANDER</span><h2 id="world3dPlaceName">阿卡迪亚全境</h2><p id="world3dPlaceText">十五处远方，沿河流与古道相连。</p><div class="world3d-card-line"><button id="world3dStart">从沙德兰出发 ↗</button><button id="world3dCloseView" hidden>靠近</button><button id="world3dReadPlace" hidden>地方志 ↗</button></div></article>
+          <aside class="world3d-map" aria-label="3D 世界导航小地图"><header><span>THE KNOWN REALMS</span><span>N ↑</span></header><canvas id="world3dMiniMap" width="380" height="264" role="img" aria-label="点击小地图可抵达最近地点，也可使用顶部地点选择框"></canvas><small>点击抵达 · 箭头为当前视点</small></aside>
+          <div class="world3d-crosshair" id="world3dCrosshair" hidden></div>
+          <div class="world3d-touch-controls" aria-label="触屏飞行控制"><div class="world3d-dpad"><button data-flight-key="KeyW" aria-label="前进">↑</button><button data-flight-key="KeyA" aria-label="左移">←</button><button data-flight-key="KeyS" aria-label="后退">↓</button><button data-flight-key="KeyD" aria-label="右移">→</button></div><div class="world3d-elevation"><button data-flight-key="KeyE" aria-label="升高">上升</button><button data-flight-key="KeyQ" aria-label="降低">下降</button></div></div>
+          <div class="world3d-statusbar"><span id="world3dHint">左键旋转 · WASD / 方向键平移 · Shift 加速 · 滚轮缩放</span><label class="world3d-speed-label" id="world3dSpeedWrap" hidden>速度<select id="world3dSpeed"><option value="slow">慢行 8</option><option value="normal" selected>巡游 35</option><option value="fast">疾行 120</option><option value="world">远行 450</option></select><span>m/s</span></label><button id="world3dLock" hidden title="锁定鼠标转头，Esc 释放">锁定视角</button><span class="world3d-readout" id="world3dReadout"></span></div>
+          <aside class="world3d-help" id="world3dHelp" hidden><h3>去任何你想去的地方</h3><p><b>环绕查看</b><br>左键拖动旋转，WASD 或方向键沿地面平移，Shift 加速，滚轮拉近或拉远。平移速度随观看距离调整。触屏使用单指旋转、双指缩放和平移。</p><p><b>自由飞行</b><br>WASD 或方向键移动，Q 下降，E 上升，Shift 加速。按住左键转头，或使用“锁定视角”。Esc 释放视角并回到环绕模式。</p><p>顶部地点选择、场景地名、左侧索引和小地图均可快速抵达。点击“地方志”对照概念素材。</p><hr><p>建筑、陈设和植被参考各地概念图细化。飞行可穿行建筑查看构造，地精洞道可从南侧入口进入。大陆有连续海岸与自然海湾，地精部落和四季神殿位于远方。A4 地图压缩了旅途距离，三维间距为可调整的制作尺度。</p><button id="world3dHelpClose">开始探索 ↗</button></aside>
+          <div class="world3d-loading" id="world3dLoading"><div><span class="orbit-mark"></span><strong>让远方，有了形状</strong><p>正在准备阿卡迪亚的三维世界…</p></div></div>
+        </div>
+        <div class="world3d-footnote"><span>概念图建筑与植被 · 自然海岸 · A4 图面压缩距离，三维尺度可调整</span><span>BUILT FROM THE ATLAS &nbsp; · &nbsp; MMXXVI</span></div>
+      </section>
+      <section id="galleryView" class="view" aria-labelledby="galleryTitle" hidden>
+        <div class="page-heading"><div><span class="eyebrow">THE FIELD COLLECTION</span><h1 id="galleryTitle">地点<span>概念图鉴</span></h1><p>十九幅风景，一份持续生长的世界设定。</p></div><span class="collection-count" id="galleryCount"></span></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+      <section id="revisionsView" class="view" aria-labelledby="revisionsTitle" hidden>
+        <div class="page-heading"><div><span class="eyebrow">NOTES IN THE MARGIN</span><h1 id="revisionsTitle">修订<span>手札</span></h1><p>把想象写在页边，下一版由此开始。</p></div><button class="outline-button" id="exportNotes"><span data-icon="download"></span>导出手札</button></div>
+        <div class="revision-intro"><div><span data-icon="feather"></span><p>每条建议都保留地点、图片版本与标记位置。<br><small id="storageStatus">正在连接本地手札…</small></p></div><button class="dark-button" id="newNote">写一条建议 <span data-icon="plus"></span></button></div>
+        <div class="revision-summary" id="revisionSummary"></div>
+        <div class="revision-list" id="revisionList"></div>
+        <div class="editorial-note"><span class="eyebrow">本次已纳入的地理修订</span><p>草原要塞临河，赤砂关移至对岸；采石场调整为浅层下挖；沙德兰北向远景改为沙地与皇都。所有新概念均记录取景朝向，逐步校验相邻地点的可视关系。</p></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="locationDialog" class="location-dialog" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog>
+  <dialog id="imageDialog" class="image-dialog" aria-label="概念图大图查看"><button class="icon-button lightbox-close" data-close="imageDialog" aria-label="关闭大图"><span data-icon="close"></span></button><div id="lightboxContent"></div></dialog>
+  <dialog id="feedbackDialog" class="feedback-dialog" aria-labelledby="feedbackTitle">
+    <div class="dialog-heading"><div><span class="eyebrow">A NOTE FOR THE NEXT EDITION</span><h2 id="feedbackTitle">留下你的修改建议</h2></div><button class="icon-button" data-close="feedbackDialog" aria-label="关闭修改建议"><span data-icon="close"></span></button></div>
+    <form id="feedbackForm">
+      <div class="form-row"><label>关于哪个地点<select id="feedbackLocation" name="location"></select></label><label>对应素材<select id="feedbackImage" name="image"></select></label></div>
+      <div class="annotation-wrap" id="annotationWrap"><button type="button" id="annotationCanvas" class="annotation-canvas" aria-label="在图片上点击标记需要修改的位置"><img id="annotationImage" alt="待修改素材，点击可标记位置"><span id="annotationPin" hidden>✦</span></button><div class="annotation-caption"><span>点击图片，可标记具体位置</span><button type="button" class="text-button" id="clearPoint">清除标记</button></div></div>
+      <div class="form-row"><label>修改方向<select name="category"><option value="geography">地理与视线关系</option><option value="geometry">建筑布局与比例</option><option value="materials">材质与颜色</option><option value="mood">氛围与光照</option><option value="story">故事与设定</option><option value="other">其他建议</option></select></label><label>优先程度<select name="priority"><option value="normal">常规调整</option><option value="high">优先修改</option><option value="idea">灵感备忘</option></select></label></div>
+      <label class="note-label">具体想怎么改<textarea id="feedbackMessage" name="message" rows="4" minlength="2" maxlength="4000" required placeholder="例如：保留四间小屋，把北面的远景改成远处皇都；金合欢树冠再低一些…"></textarea></label>
+      <div class="form-bottom"><span id="feedbackSaveHint">建议保存在本地，可随时导出。</span><button type="submit" class="dark-button">存入修订手札 <span data-icon="arrow"></span></button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript>请启用 JavaScript 以使用互动地图。也可以直接浏览 assets/concepts 中的概念图片。</noscript>
+</body>
+</html>

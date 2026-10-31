@@ -1,0 +1,10 @@
+{
+  "name": "arcadia-atlas",
+  "version": "1.1.0",
+  "private": true,
+  "description": "阿卡迪亚互动世界图志与概念素材审阅台",
+  "scripts": {
+    "start": "python server.py",
+    "check": "node --check app.js && node --check world.js && node --check world3d.js && node --check world3d-model.js && node --check vendor/OrbitControls.js && python verify.py"
+  }
+}
